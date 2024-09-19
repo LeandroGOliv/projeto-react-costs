@@ -10,7 +10,7 @@ Execute na primeira vez que for rodar o projeto
  <li>npm install json-server react-icons react-router-dom uuid 
 </ul>
 Para iniciar <br>
-
+<ul>
  <li>npm start 
  <li>npm run backend (OBS: tem que ser em um terminal diferente do npm start)
-
+</ul>
