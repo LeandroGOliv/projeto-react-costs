@@ -4,13 +4,13 @@ Projeto feito para práticar aprendizados em react, sem muita atenção ao css e
  
 Execute na primeira vez que for rodar o projeto
 
-Abrir na IDE de preferencia pessoal
-cd local-que-baixou-o-projeto
-npm install
-npm install json-server react-icons react-router-dom uuid
+Abrir na IDE de preferencia pessoal <br>
+cd local-que-baixou-o-projeto <br>
+npm install <br>
+npm install json-server react-icons react-router-dom uuid <br>
 
-Para iniciar
+Para iniciar <br>
 
-npm start
-npm run backend (OBS: tem que ser em um terminal diferente do npm start)
+npm start <br> 
+npm run backend (OBS: tem que ser em um terminal diferente do npm start) <br>
 
