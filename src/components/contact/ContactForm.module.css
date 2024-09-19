@@ -1,0 +1,13 @@
+.form {
+  width: 100%;
+  border-bottom: 1px solid #222;
+  box-sizing: border-box;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.central_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

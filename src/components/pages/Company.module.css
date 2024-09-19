@@ -1,0 +1,21 @@
+.company_container {
+  padding: 2em;
+}
+
+.tittle_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.company_container_text {
+  display: block;
+  font-size: 1.3em;
+  text-align: center;
+  text-indent: 20px;
+}
+
+.contrast {
+  color: #ffbb33;
+  font-weight: bold;
+}

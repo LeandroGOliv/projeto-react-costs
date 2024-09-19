@@ -1,0 +1,86 @@
+{
+  "projects": [
+    {
+      "id": "c4ac",
+      "name": "teste edit de projeto",
+      "budget": "4260",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 1462,
+      "services": [
+        {
+          "name": "adasdsadada",
+          "cost": "231",
+          "description": "adasdadasda",
+          "id": "320a337e-330d-4379-b386-a104269de052"
+        },
+        {
+          "name": "sdasdasd",
+          "cost": "1231",
+          "description": "asdasdsadas",
+          "id": "19eefd96-3e19-40af-b52b-a97542ef0a79"
+        }
+      ]
+    },
+    {
+      "id": "a903",
+      "name": "testemessage2",
+      "budget": "13000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "8924",
+      "name": "teste4423423",
+      "budget": "12000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 3000,
+      "services": [
+        {
+          "name": "Contratar Dev FrontEnd",
+          "cost": "3000",
+          "description": "Atualizar os componentes do frontend conforme necessidades.",
+          "id": "08b1fe0d-e925-4164-a55f-c06ae68490be"
+        }
+      ]
+    },
+    {
+      "id": "fd4b",
+      "name": "teste final",
+      "budget": "8000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}
