@@ -5,7 +5,6 @@ import Input from "../form/Input";
 import SubmitButton from "../form/SubmitButton";
 
 function ContactForm({ btnText, handleSubmit }) {
-  // TERMIANAR
   const [contact, setContact] = useState({
     name: "",
     email: "",
