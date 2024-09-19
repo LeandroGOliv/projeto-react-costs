@@ -1,9 +1,9 @@
 .container {
   width: 1200px;
   display: flex;
-  justify-content: space-between; /* espaça os elementos de forma igual durante a linha horizontal*/
-  margin: 0 auto; /* centraliza o conteudo */
-  flex-wrap: wrap; /* quando os elementos filhos ultrapassarem a largura de 1200 eles vao pra baixo criando uma nova linha */
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .min_height {
@@ -11,7 +11,7 @@
 }
 
 .start {
-  justify-content: flex-start; /* coloca os conteudos pro inicio */ /* diversos conceitos daqui vou APRENDER MELHOR EM FLEXBLOX */
+  justify-content: flex-start;
 }
 
 .column {

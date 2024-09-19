@@ -6,23 +6,22 @@ function Message({ type, msg }) {
 
   useEffect(() => {
     if (!msg) {
-      // se a mensagem não existe setar setInvisible como false
       setVisible(false);
       return;
     }
 
-    setVisible(true); // se a mensagem existir ela vai ignorar o if... e vir pra ca
+    setVisible(true);
 
     const timer = setTimeout(() => {
       setVisible(false);
     }, 3000);
 
-    return () => clearTimeout(timer); // só para finalizar pq o useEffect precisa dar um return
+    return () => clearTimeout(timer);
   }, [msg]);
 
   return (
     <>
-      {visible && ( //if visible...
+      {visible && (
         <div className={`${styles.message} ${styles[type]}`}>{msg}</div>
       )}
     </>

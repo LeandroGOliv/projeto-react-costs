@@ -7,7 +7,7 @@ import styles from "./ProjectForm.module.css";
 
 function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [categories, setCategories] = useState([]);
-  const [project, setProject] = useState(projectData || {}); //se vierem os dados do formulario de edicao, ele vai preecher atravees do projectData, se não vai ser vazio pra eu mesmo preencher
+  const [project, setProject] = useState(projectData || {});
 
   useEffect(() => {
     fetch("http://localhost:5000/categories", {
@@ -16,23 +16,20 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         "Content-Type": "application/json",
       },
     })
-      .then((resp) => resp.json()) //pego a resposta e transformo em json, coisas padrão de promises aqui
+      .then((resp) => resp.json())
       .then((data) => {
-        //pego os dados e falo que setCategories é igual aos dados
         setCategories(data);
       })
       .catch((err) => console.log(err));
-  }, []); // no use effects, ele pede uma dependencia para ele renderizar os componentes, caso seja deixada vazia a dependencia ele renderiza apenas uma vez após a montagem inicial do componente, nesse caso se não utilizar useEffect ele vai ficar renderizando infinito e puxando os dados da api em loop... sendo q a gente só precisa renderizar  uma vez
+  }, []);
 
   const submit = (e) => {
-    e.preventDefault(); //pra não dar aquele reload quando envia o formulario
+    e.preventDefault();
     handleSubmit(project);
-    // console.log(project);
   };
 
   function handleChange(e) {
-    setProject({ ...project, [e.target.name]: e.target.value }); //independente do input que eu preencher vai mudar alguma propiedade de texto do project
-    // tentar entender melhor a linha de cima
+    setProject({ ...project, [e.target.name]: e.target.value });
   }
 
   function handleCategory(e) {
@@ -40,7 +37,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
       ...project,
       category: {
         id: e.target.value,
-        name: e.target.options[e.target.selectedIndex].text, // selectIndex ve pelo index qual foi a opcao selecionada
+        name: e.target.options[e.target.selectedIndex].text,
       },
     });
   }
@@ -67,7 +64,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         name="category_id"
         text="Selecione a categoria"
         options={categories}
-        value={project.category ? project.category.id : ""} // se ele ja tiver um project category eu passo o id dessa categoria se não eu passo um valor vazio
+        value={project.category ? project.category.id : ""}
         handleOnChange={handleCategory}
       />
       <SubmitButton text={btnText} />

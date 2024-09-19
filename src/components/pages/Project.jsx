@@ -1,7 +1,6 @@
-import { parse, v4 as uuidv4 } from "uuid";
-
+import { v4 as uuidv4 } from "uuid";
 import styles from "./Project.module.css";
-import { useParams } from "react-router-dom"; // é usado para acessar parâmetros da URL que estão definidos nas rotas da aplicação. Esses parâmetros podem ser valores dinâmicos que você precisa acessar dentro de um componente.
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Loading from "../layout/Loading";
@@ -26,7 +25,6 @@ function Project() {
 
   useEffect(() => {
     setTimeout(() => {
-      // de novo um timeout só pra simular um atraso ao consultar o projeto...
       fetch(`http://localhost:5000/projects/${id}`, {
         method: "GET",
         headers: {
@@ -50,7 +48,7 @@ function Project() {
         "O orçamento não pode ser menor que o custo total do projeto!"
       );
       setType("error");
-      return false; // pra parar a função de editPost para não editar o projeto, pois se ta errado o código não deve continuar
+      return false;
     }
 
     fetch(`http://localhost:5000/projects/${project.id}`, {
@@ -207,8 +205,6 @@ function Project() {
       ) : (
         <Loading />
       )}
-      {/*basicamente um if
-      else mas em ternario */}
     </>
   );
 }

@@ -9,19 +9,17 @@ import { useState, useEffect } from "react";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
-  const [removeLoading, setRemoveLoading] = useState(false); // false porque ele sempre iniciar, depois a gente vai dar true pra remover ele
+  const [removeLoading, setRemoveLoading] = useState(false);
   const [projectMessage, setProjectMessage] = useState("");
 
-  const location = useLocation(); // pra localizar algo que ta dentro do navigate
+  const location = useLocation();
   let message = "";
   if (location.state) {
-    // if eu tiver algo no state da location...
     message = location.state.message;
   }
 
   useEffect(() => {
     setTimeout(() => {
-      // esse timeout é só pra simular a demora da requisiçao dos dados, como aqui o servidor é local ele carrega quase instantaneamente e dai não conseguiriamos ver nosso loader
       fetch("http://localhost:5000/projects", {
         method: "GET",
         headers: {
@@ -32,7 +30,7 @@ function Projects() {
         .then((data) => {
           console.log(data);
           setProjects(data);
-          setRemoveLoading(true); //quando carregar os projetos eu removo o loader...
+          setRemoveLoading(true);
         })
         .catch((err) => console.log(err));
     }, 1000);
@@ -47,7 +45,7 @@ function Projects() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setProjects(projects.filter((project) => project.id !== id)); // cria uma nova array com todos os projetos que tem o id diferente do que foi selecionado...
+        setProjects(projects.filter((project) => project.id !== id));
         setProjectMessage("Projeto removido com sucesso!");
       })
       .catch((err) => console.log(err));
@@ -61,7 +59,7 @@ function Projects() {
       </div>
       {message && <Message msg={message} type="success" />}
       {projectMessage && <Message msg={projectMessage} type="success" />}
-      {/* teria formas melhores de fazer sem ser clonando a linha de cima mas assim funciona2*/}
+      {/* teria formas melhores de fazer sem ser clonando a linha de cima mas assim funciona*/}
       <Container customClass="start">
         {projects.length > 0 &&
           projects.map((project) => (
@@ -75,10 +73,9 @@ function Projects() {
             />
           ))}
         {!removeLoading && <Loading />}
-        {removeLoading &&
-          projects.length === 0 && ( // situação pra quando não tem projetos, se não tem loader, no caso ele ta setado como true e eu tiver 0 projetos eu mostro esse paragrafo
-            <p>Não há projetos cadastrados!</p>
-          )}
+        {removeLoading && projects.length === 0 && (
+          <p>Não há projetos cadastrados!</p>
+        )}
       </Container>
     </div>
   );
