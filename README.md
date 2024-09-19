@@ -3,12 +3,12 @@
 Projeto feito para práticar aprendizados em react, sem muita atenção ao css e ao conteúdo do site.
  
 Execute na primeira vez que for rodar o projeto
-<li>
- <ul>Abrir na IDE de preferencia pessoal <ul/> 
- <ul>cd local-que-baixou-o-projeto <ul/> 
- <ul>npm install<ul/> 
- <ul>npm install json-server react-icons react-router-dom uuid <ul/>
-<li/>
+<ul>
+ <li>Abrir na IDE de preferencia pessoal <li/>
+ <li>cd local-que-baixou-o-projeto <li/>
+ <li>npm install<li/>
+ <li>npm install json-server react-icons react-router-dom uuid <li/>
+</ul>
 Para iniciar <br>
 
 npm start <br> 
