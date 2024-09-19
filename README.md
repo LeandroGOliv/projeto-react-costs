@@ -1,4 +1,4 @@
- Projeto Costs
+# Projeto Costs
 
 Projeto feito para práticar aprendizados em react, sem muita atenção ao css e ao conteúdo do site.
  
