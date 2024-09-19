@@ -1,6 +1,7 @@
 # Projeto Costs
 
 Projeto feito para práticar aprendizados em react, sem muita atenção ao css e ao conteúdo do site.
+(os setTimeouts presentes no código servem apenas para representar uma demora na requisição)
  
 **Execute na primeira vez que for rodar o projeto**
 <ul>
