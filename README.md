@@ -9,6 +9,7 @@ Projeto feito para práticar aprendizados em react, sem muita atenção ao css e
  <li>npm install
  <li>npm install json-server react-icons react-router-dom uuid 
 </ul>
+
 **Para iniciar**
 <ul>
  <li>npm start 
